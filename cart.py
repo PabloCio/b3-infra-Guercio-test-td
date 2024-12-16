@@ -33,3 +33,23 @@ class Cart:
 
     def moyenne(self):
         return (self.calculate_total() / sum(quantity for product, quantity in self.items.items()))
+    
+
+    def quantite(self):
+    # Demande à l'utilisateur quel produit modifier et la nouvelle quantité
+    product_name = input("Quel produit voulez-vous modifier ? ").strip()
+    for product in self.items.items():
+        if product.name.lower() == product_name.lower():
+            new_quantity = int(input(f"Quelle quantité pour {product.name} ? "))
+            if new_quantity <= 0:
+                # Si la quantité est <= 0, supprime le produit
+                self.remove_product(product)
+                print(f"{product.name} a été retiré du panier.")
+            elif new_quantity > product.stock:
+                # Vérifie que la quantité demandée ne dépasse pas le stock disponible
+                print(f"Impossible d'ajouter {new_quantity} pour {product.name}. Stock disponible : {product.stock}.")
+            else:
+                self.items[product] = new_quantity
+                print(f"La quantité de {product.name} a été mise à jour à {new_quantity}.")
+            return
+    print(f"{product_name} n'est pas dans le panier.")
