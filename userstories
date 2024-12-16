@@ -1,5 +1,5 @@
 TP
-CART :
+USERSTORIES - CART:
 1 - User story
 En tant que client
 Je veux pouvoir modifier les quantités
@@ -16,9 +16,23 @@ Critère je peux voir la moyenne de mon panier
 En tant que client
 Je veux pouvoir vider mon panier
 Afin de recommencer mes achats
-Critère il n’y a plus de produit dans mon panier
+Critère il n’y a plus d'article dans mon panier
 
 
+USERSTORIES ORDER:
+1-Création d'une commande
+Étant donné que j'ai un panier avec des articles,
+Quand je crée une commande à partir de ce panier,
+Alors une commande est créée avec les mêmes articles et quantités que dans le panier,
+Et le total de la commande est calculé.
 
+2-Passer une commande
+Étant donné que j'ai une commande créée,
+Quand je passe la commande,
+Alors le stock des articles est réduit en fonction des quantités commandées,
+Et un message de confirmation est affiché avec le total de la commande.
 
-
+3-Consulter une commande
+Étant donné que j'ai une commande passée,
+Quand je consulte les détails de la commande,
+Alors je vois la liste des articles avec leurs quantités et le total de la commande.
