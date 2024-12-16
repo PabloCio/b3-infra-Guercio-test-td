@@ -29,5 +29,9 @@ def test_cart_methods():
     total_quantite = cart.quantite()
     print(f"Quantité totale de produits dans le panier : {total_quantite}")
 
-# Appeler les tests
-test_cart_methods()
+    # Test de la fonction mmettre_de_cote
+    total_quantite = cart.quantite()
+    print(f"Quantité totale de produits dans le panier : {total_quantite}")
+
+    # Appeler les tests
+    

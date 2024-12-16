@@ -3,7 +3,7 @@ from product import Product
 class Cart:
     def __init__(self):
         self.items = {}  # {product: quantity}
-        self.mtd = {} # {product: quantity}
+        self.mtc = {} # {product: quantity}
 
     def add_product(self, product: Product, quantity: int):
         if product.stock < quantity:
@@ -49,12 +49,9 @@ class Cart:
                 return
         print(f"{product_name} n'est pas dans le panier.")
 
-    def mettre_de_cote(self, product: Product, quantity: int):
-        product_name = input("Quel produit voulez-vous mettre de coter ? ").strip()
-        if product_name in self.items:
+    def mettre_de_cote(self, product: Product):
+        if product in self.items :
             quantity = self.items[product]
-            self.mtd[product] = self.mtd.get(product, 0) + quantity
+            self.mtc[product] = self.mtc.get(product, 0) + quantity
             del self.items[product]
-        else:
-            print(f"{product.name} n'est pas dans le panier.")
-        raise KeyError(f"{product.name} is not in the cart.")
+    
