@@ -1,0 +1,24 @@
+TP
+CART :
+1 - User story
+En tant que client
+Je veux pouvoir modifier les quantités
+Afin de mettre à jour le panier
+Critère je peux indiquer la quantité voulue
+
+2 - User story
+En tant que client
+Je veux pouvoir voir le prix moyen des articles de mon panier
+Afin d’avoir la moyenne du total de mon panier
+Critère je peux voir la moyenne de mon panier
+
+3 – User story
+En tant que client
+Je veux pouvoir vider mon panier
+Afin de recommencer mes achats
+Critère il n’y a plus de produit dans mon panier
+
+
+
+
+
